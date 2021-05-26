@@ -1,10 +1,10 @@
 import React from 'react'
 import {HomeInput} from './HomeInput'
-import { AppContext, useGlobalContext } from '../context'
+import { useGlobalContext } from '../context'
 import { Link } from 'react-router-dom'
 
 export const Home = () => {
-    const {AllCountries, searchFilter, regionFilter, setSelectedCountry, selectedCountry, loading} = useGlobalContext()
+    const {AllCountries, searchFilter, regionFilter, loading} = useGlobalContext()
 
     const filterBySearch = (item) => {
         if (item.toLowerCase().includes(searchFilter)) return true

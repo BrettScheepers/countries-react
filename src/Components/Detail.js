@@ -1,5 +1,5 @@
-import React, { useState, useEffect} from 'react'
-import { AppContext, useGlobalContext } from '../context'
+import React, { useState } from 'react'
+import { useGlobalContext } from '../context'
 import { Link } from 'react-router-dom'
 
 export const Detail = ({ match }) => {   

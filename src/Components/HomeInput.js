@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 // import { FaSearch } from 'react-icons/fa'
-import { AppContext, useGlobalContext } from '../context'
+import { useGlobalContext } from '../context'
 
 export const HomeInput = () => {
     const { AllRegions, setSearchFilter, setRegionFilter } = useGlobalContext()
