@@ -5,16 +5,14 @@ const AppContext = React.createContext();
 
 export const AppProvider = ({children}) => {
     const [loading, setLoading] = useState(true)
-    let allCountryStats = null;
-    const AllCountries = useRef(allCountryStats)
+    const AllCountries = useRef(null)
     const AllRegions = useRef([])
 
     useEffect(() => {
         fetch('https://restcountries.eu/rest/v2/all')
             .then(response => response.json())
             .then(data => {
-                allCountryStats = data
-                AllCountries.current = allCountryStats
+                AllCountries.current = data
                 AllRegions.current = [
                     ...new Set(
                         AllCountries.current
