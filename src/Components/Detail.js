@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef } from 'react'
 import { useGlobalContext } from '../context'
 import { Link } from 'react-router-dom'
 
@@ -6,8 +6,9 @@ export const Detail = ({ match }) => {
     const { AllCountries, setSearchFilter, setRegionFilter } = useGlobalContext()
     let country = AllCountries.current.filter(item => item.name === match.params.name)[0]
 
-    const [selectedCountry, setSelectedCountry] = useState(country)
-    const {name, flag, nativeName, population, region, subregion, capital, topleveldomain, currencies, languages} = selectedCountry
+    // eslint-disable-next-line no-unused-vars
+    const selectedCountry = useRef(country)
+    const {name, flag, nativeName, population, region, subregion, capital, topleveldomain, currencies, languages} = selectedCountry.current
     let languagesStr = languages.map(lang => lang.name).join(', ')  
 
     return (
