@@ -93,8 +93,13 @@ select:focus {
   margin-bottom: 3rem;
   margin-top: 1rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+}
+
+.home-input-container div {
+  padding-top:  1rem;
 }
 
 .home-input-container div input {
@@ -166,16 +171,34 @@ select:focus {
 
 /* Detail Page */
 .detail-country-container {
-  font-size: 16px;
-  display: grid;
-  gap: 3rem;
-  grid-template-areas: 
-    'btn'
-    'flag info'
-  ;
+  font-size: 20px;
+  /* display: grid;
+  gap: 3rem; */
 }
 
-.back-btn-container {
+.detail-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.detail-name-div {
+  margin: 1.5rem 0;
+}
+
+.detail-country-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+.detail-country-stats div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* .back-btn-container {
   grid-area: 'btn';
 }
 
@@ -185,7 +208,7 @@ select:focus {
 
 .detail-country-info {
   grid-area: "info";
-}
+} */
 
 .detail-flag {
   display: block;
@@ -205,4 +228,34 @@ select:focus {
 
 .stats {
   font-weight: 600;
+}
+
+.borders-list button {
+  font-size: 12px;
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 420px) {
+  .header {
+    font-size: 12px;
+    padding: 1.8rem 2rem;
+  }
+  .home-country-container {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  .detail-country-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  #country-search {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 710px) {
+  .container {
+    padding: 1rem 1.5rem;
+    font-size: 0.8rem;
+  }
+  .detail-wrapper {
+    grid-template-columns: 1fr;
+  }
 }

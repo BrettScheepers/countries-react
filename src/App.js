@@ -12,6 +12,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/:name" exact component={Detail} />
+          {/* <Route path="/:name" exact render={() => <Detail key={Date.now()}/>} /> */}
         </Switch>
         {/* <Home />
         <Detail /> */}

@@ -12,6 +12,7 @@ export const HomeInput = () => {
                 <input 
                     type="text" 
                     className="dark-element" 
+                    id="country-search"
                     placeholder="Search for a country..."
                     onChange={(e) => setSearchFilter(e.target.value.toLowerCase())}
                 />
