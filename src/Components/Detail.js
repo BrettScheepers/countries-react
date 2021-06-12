@@ -1,10 +1,9 @@
 import React, { useRef, useEffect, useState } from 'react'
 import { useGlobalContext } from '../context'
-import { Link, useHistory, useLocation } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 
 export const Detail = ({ match }) => {   
     const history = useHistory()
-    const location = useLocation()
     const { AllCountries, setSearchFilter, setRegionFilter } = useGlobalContext()
     // let country = AllCountries.current.filter(item => item.name === match.params.name)[0]
     const [flag, setFlag] = useState('')
