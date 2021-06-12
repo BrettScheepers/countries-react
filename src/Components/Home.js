@@ -33,7 +33,7 @@ export const Home = () => {
                             // style={{backgroundImage: flagUrl}}
 
                             return (
-                                <Link to={`/${name}`} key={name} id={name}>
+                                <Link to={`/details/${name}`} key={name} id={name}>
                                     <div className="home-country-card dark-element dark-shadow">
                                         <div className="home-flag-div">
                                             <img className="home-flag" src={flag} alt={name}/>
