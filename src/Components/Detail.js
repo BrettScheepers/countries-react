@@ -58,7 +58,7 @@ export const Detail = ({ match }) => {
                 console.log('completed')
             })
             .catch(error => console.log(error))
-    }, [match.params])
+    }, [match.params, AllCountries, borderCountries])
 
     if (isLoading) return <section className="container dark-container"></section>
 
